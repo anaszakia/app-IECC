@@ -1,0 +1,60 @@
+{
+  "expo": {
+    "name": "IECC Tanggap Darurat",
+    "slug": "app-iecc",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.iecc.mobileapp",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "Aplikasi membutuhkan akses lokasi GPS untuk mengirimkan koordinat darurat insiden dan pelacakan unit armada.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Aplikasi membutuhkan akses lokasi GPS di latar belakang untuk pelacakan armada lapangan secara realtime.",
+        "NSCameraUsageDescription": "Aplikasi membutuhkan akses kamera untuk mengambil foto bukti insiden darurat di TKP.",
+        "NSPhotoLibraryUsageDescription": "Aplikasi membutuhkan akses galeri foto/video untuk melampirkan bukti media kejadian.",
+        "NSMicrophoneUsageDescription": "Aplikasi membutuhkan akses mikrofon untuk merekam bukti suara darurat."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.iecc.mobileapp",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Izinkan aplikasi mengakses lokasi Anda untuk pelacakan armada dan navigasi darurat."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Aplikasi membutuhkan izin untuk mengakses foto lampiran kejadian.",
+          "cameraPermission": "Aplikasi membutuhkan izin kamera untuk memotret lokasi insiden."
+        }
+      ]
+    ]
+  }
+}
